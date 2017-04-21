@@ -2,8 +2,8 @@ driver_path = File.join(File.dirname(__FILE__), "..", "..", "drivers", "chromedr
 
 Given(/^I open a browser$/) do
 	@browser = Selenium::WebDriver.for :chrome, driver_path: driver_path
-	@browser.manage.timeouts.implicit_wait = 50
-	@browser.manage.timeouts.page_load = 20
+	@browser.manage.timeouts.implicit_wait = 15
+	@browser.manage.timeouts.page_load = 15
 	puts "WebDriver has been created"
 end
 

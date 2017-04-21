@@ -2,6 +2,6 @@ require "selenium-webdriver"
 require "rspec"
 
 
-#After do
-#	@browser.quit
-#end
+After do
+	@browser.quit
+end
