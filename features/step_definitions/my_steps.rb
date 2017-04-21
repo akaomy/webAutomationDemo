@@ -1,11 +1,4 @@
-driver_path = File.join(File.dirname(__FILE__), "..", "..", "drivers", "chromedriver.exe")
-
-Given(/^I open a browser$/) do
-	@browser = Selenium::WebDriver.for :chrome, driver_path: driver_path
-	@browser.manage.timeouts.implicit_wait = 15
-	@browser.manage.timeouts.page_load = 15
-	puts "WebDriver has been created"
-end
+#Login
 
 Then(/^I logn with "([^"]*)" email and "([^"]*)" password$/) do |email, passwd|
 	#open link
@@ -25,3 +18,4 @@ Then(/^I should see "([^"]*)" link$/) do |link|
 	puts "#{link}"
 	expect(@browser.find_element(:css, '.logout').text).to eq(link)
 end
+
